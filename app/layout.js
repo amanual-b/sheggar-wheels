@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/site";
 const font = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
 export const metadata = {
-  metadataBase: new URL(SITE_URL || "https://sheggar-wheels-pi.vercel.app"),
+  metadataBase: new URL("https://sheggar-wheels-pi.vercel.app"),
   title: { default: "Sheggar Wheels | Peer-to-peer car rental in Addis Ababa", template: "%s | Sheggar Wheels" },
   description: "Rent a car from local owners in Addis Ababa, or earn from your own. Browse cars, request a trip and manage your listings.",
   applicationName: "Sheggar Wheels",
