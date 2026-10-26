@@ -11,7 +11,6 @@ export const metadata = {
     title: "Browse cars | Sheggar Wheels",
     description: "Find a rental car in Addis Ababa.",
     url: "/cars",
-    // Share image shows the first car in the default catalogue order (newest approved listing).
     images: [{ url: "/og/cars.jpg", width: 1200, height: 630, alt: "Cars available on Sheggar Wheels" }],
   },
   twitter: { card: "summary_large_image", title: "Browse cars | Sheggar Wheels", images: ["/og/cars.jpg"] },
