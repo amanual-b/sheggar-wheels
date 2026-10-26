@@ -36,10 +36,4 @@
 
 ## Prioritised next steps
 
-1. Run `npm install && npm run build`, fix any compile findings, deploy, record Lighthouse numbers (PERF.md), add real screenshots.
-2. Add Playwright end-to-end tests for the 8-minute walkthrough.
-3. Introduce a thin `/api` layer behind the existing `lib/` functions, then swap storage for a database (SQLite/Postgres).
-4. Add real sign-in (e.g. Auth.js) and move ownership checks server-side.
-5. Booking transactions + payment provider sandbox.
-6. Accessibility audit with a screen reader (calendar, dialogs, pagination); Amharic localisation.
-7. Reviews moderation, cancellation policies and owner payouts.
+1. Run `npm install && npm run build`

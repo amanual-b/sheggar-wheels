@@ -1,6 +1,6 @@
 # Sheggar Wheels
 
-A peer-to-peer car rental marketplace for **Addis Ababa**, built as the *IBT–QIYAS Full-Stack Software Development Program* **Frontend Capstone (second project)**.
+A peer-to-peer car rental marketplace for **Addis Ababa**
 
 > *"I built Sheggar Wheels, a responsive peer-to-peer car rental frontend with role-aware navigation, car search, booking state management, owner tools, and an admin dashboard."*
 
