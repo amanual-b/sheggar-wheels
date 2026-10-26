@@ -1,23 +1,23 @@
 {
   "name": "sheggar-wheels",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "Sheggar Wheels - peer-to-peer car rental frontend capstone (Next.js + browser storage)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "next": "16.4.2",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "leaflet": "^1.9.4",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.0",
+    "swr": "^2.3.0"
   },
-  "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.2",
-    "tailwindcss": "^4"
+  "engines": {
+    "node": ">=18.18"
   }
 }
