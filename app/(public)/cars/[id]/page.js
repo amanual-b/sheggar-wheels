@@ -15,9 +15,9 @@ export async function generateMetadata({ params }) {
   const title = `${car.make} ${car.model} ${car.year} for rent in ${car.neighbourhood}`;
   const description = `${car.make} ${car.model} (${car.transmission}, ${car.seats} seats) from ETB ${car.pricePerDay} per day in ${car.neighbourhood}, Addis Ababa. `;
   return {
-    title,
-    description,
-    alternates: canonicalFor(`/cars/${id}`),
+    title: title ,
+    description: description,
+    alternates: { canonicalFor: `/cars/${id}` },
     openGraph: { title, description, url: `/cars/${id}`, type: "website", images: [{ url: `/og/${id}.jpg`, width: 1200, height: 630, alt: title }] },
     twitter: { card: "summary_large_image", title, description, images: [`/og/${id}.jpg`] },
   };
@@ -34,7 +34,7 @@ export default async function CarPage({ params }) {
           "@type": "Product",
           name: `${car.make} ${car.model} ${car.year}`,
           description: car.description,
-          image: car.photos.map((p) => `${SITE_URL}${p}`),
+          image: car.photos.map((p) => `https://sheggar-wheels-pi.vercel.app/cars/${p}`),
           category: "Car rental",
           offers: { "@type": "Offer", price: car.pricePerDay, priceCurrency: "ETB", availability: "https://schema.org/InStock" },
         }

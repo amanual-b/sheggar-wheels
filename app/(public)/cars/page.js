@@ -1,12 +1,11 @@
 import { Suspense } from "react";
 import CatalogueClient from "@/components/CatalogueClient";
 import { PageLoading } from "@/components/States";
-import { canonicalFor } from "@/lib/site";
 
 export const metadata = {
   title: "Browse cars",
   description: "Search and filter peer-to-peer rental cars in Addis Ababa by neighbourhood, price, transmission, seats and dates.",
-  alternates: canonicalFor("/cars"),
+  alternates: {canonicalFor: "/cars"},
   openGraph: {
     title: "Browse cars | Sheggar Wheels",
     description: "Find a rental car in Addis Ababa.",

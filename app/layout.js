@@ -9,7 +9,7 @@ const font = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-sans", di
 
 const baseUrl = process.env.SITE_URL 
   ? process.env.SITE_URL.startsWith('http') ? process.env.SITE_URL : `https://${process.env.SITE_URL}`
-  : "https://sheggar-wheels-pi.vercel.app";
+  : "https://sheggar-wheels-pi.vercel.app/";
 
 export const metadata = {
   metadataBase: new URL(baseUrl), 
@@ -18,10 +18,7 @@ export const metadata = {
     template: "%s | Sheggar Wheels" 
   }, 
   description: "Rent a car from local owners in Addis Ababa, or earn from your own. Browse cars, request a trip and manage your listings.", 
-  applicationName: "Sheggar Wheels", 
-  icons: { 
-    icon: "/icon.svg" 
-  }, 
+  
   openGraph: { 
     type: "website", 
     siteName: "Sheggar Wheels", 
