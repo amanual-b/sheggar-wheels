@@ -1,4 +1,4 @@
-# AUTH – demo authentication, guardrails and negative tests
+# AUTH – demo authentication
 
 > **Everything here is a demonstration of frontend design. It is NOT security.** Browser storage is user-editable; anyone can open dev tools, change `sessionStorage`, and "become" an admin. Real enforcement needs a server (FUTURE.md). No passwords, payment credentials or secrets are stored anywhere.
 
