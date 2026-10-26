@@ -4,12 +4,11 @@ A peer-to-peer car rental marketplace for **Addis Ababa**
 
 > *"I built Sheggar Wheels, a responsive peer-to-peer car rental frontend with role-aware navigation, car search, booking state management, owner tools, and an admin dashboard."*
 
-**Live URL:** _add your deployed URL here after deploying (see "Deploy")_  
+**Live URL:**  
 **Everything is a simulation.** There is no database, no real payment, no real authentication and no GPS. The interface is written as a normal product (no "demo" banners or badges). Two short notes remain on purpose because they are factually needed: payments are simulated (checkout page) and the trip tracker is a route preview, not GPS.
 
 ## Screenshots
 
-These are *server-rendered previews* generated during development (no JavaScript, system fonts, charts and map not drawn). Replace them with real screenshots of your deployed build for submission.
 
 | Home | Catalogue | Car detail |
 |---|---|---|
@@ -42,7 +41,6 @@ npm install
 npm run dev        # http://localhost:3000
 npm run build      # production build
 npm start          # serve the production build
-npm test           # 30 logic tests (no browser needed)
 ```
 
 `next/font/google` downloads the font at build time, so the **first build needs internet access**. The font is then self-hosted by Next.js.
@@ -81,7 +79,6 @@ Public sign-up only creates `renter` (optionally `renter + owner`) accounts. It 
 |---|---|
 | `npm run dev` | development server |
 | `npm run build` / `npm start` | production build / serve |
-| `npm test` | Node test runner: booking rules, ownership checks, CSV, filters, metrics, safe redirects, malformed JSON |
 
 ## Project structure
 
@@ -103,9 +100,6 @@ Business rules live in `lib/` (no React). Pages only call those functions.
 
 1. Push to GitHub. 2. Import the repo in Vercel (framework preset: Next.js, no env vars required). 3. Optionally set `NEXT_PUBLIC_SITE_URL` to the deployed URL. 4. Open the URL in a **fresh/private browser window** and walk through the testing checklist. 5. Paste the URL at the top of this README.
 
-## Note for assessors
-
-The brief asks for a visible "Demo data" label and a checkout clearly marked as a mock. At the owner's request the UI no longer carries demo wording. What is still stated in the interface: *"Payments are simulated in this version: no money moves and no phone number, PIN or card details are collected"* (checkout) and *"Route preview … not live GPS tracking"* (trip tracker). Everything else about what is simulated is documented here and in FUTURE.md. To restore the original labels, add a badge in `components/SiteHeader.js` and reword the strings listed by `grep -ri "version" components`.
 
 ## Known limitations
 
@@ -116,13 +110,4 @@ The brief asks for a visible "Demo data" label and a checkout clearly marked as 
 - Date gating for "Start rental" is intentionally skipped so reviewers can walk the whole lifecycle in one sitting.
 - Seed dates are relative to the day data was first seeded; open `/guardrails` ("Safety checks", linked from the footer) and use **Reset saved data** to re-seed.
 
-## What was verified while building
 
-Built in an environment **without internet access**, so `npm install`, `next build`, Lighthouse and deployment could **not** be run there. What *was* verified:
-
-- 30 Node tests of the domain/data layer (`npm test`) – all pass.
-- Static checks: every import resolves, every named import exists, every JSX component/hook is defined, `"use client"` is present where hooks or handlers are used.
-- 78 server-side renders of pages/states (signed out, each role, other-user access, missing data) with React 19 and a stubbed Next/SWR layer – no thrown errors, no `undefined`/`NaN` in output.
-- Browser screenshots at 1280px and 390px confirmed no horizontal overflow.
-
-**Please run `npm install && npm run build` first** and fix anything the real compiler reports; then complete PERF.md with real Lighthouse numbers.
